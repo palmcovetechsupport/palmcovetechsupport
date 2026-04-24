@@ -1,0 +1,153 @@
+/* Navbar container */
+.navbar {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Logo */
+.logo {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Login button */
+.auth-buttons .login-btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    color: #007bff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.auth-buttons .login-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #333;
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* hide login button (optional, cleaner mobile UI) */
+    .auth-buttons {
+        display: none;
+    }
+
+    /* hide nav by default */
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid #e5e5e5;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    /* fix spacing */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* hero readability */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #subtext {
+        margin: 50px;
+
+    }
+
+    /* services stack */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* form spacing */
+    form {
+        margin: 20px;
+    }
+
+    /* contact buttons spacing fix */
+    .contact-buttons {
+        width: 100%;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+    background-color: #111;
+}

@@ -1,0 +1,316 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Logo */
+.logo {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Login button */
+.auth-buttons .login-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    color: #007bff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.auth-buttons .login-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* About Hero (match .hero style) */
+.about-hero {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #f8f9fb;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+.cta-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Shared section styling (match spacing from .services / .contact) */
+.about-content,
+.about-services,
+.about-cta {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+/* Headings */
+.about-content h2,
+.about-services h2,
+.about-cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+/* Paragraphs */
+.about-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* Services list styled like cards */
+.about-services ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+}
+
+.about-services li {
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: 0.2s ease;
+}
+
+.about-services li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+/* CTA section (match contact section vibe) */
+.about-cta {
+    text-align: center;
+    background-color: #f8f9fb;
+    border-radius: 10px;
+    margin-bottom: 7%;
+}
+
+.about-cta p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #333;
+}
+
+main {
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* hide login button (optional, cleaner mobile UI) */
+    .auth-buttons {
+        display: none;
+    }
+
+    /* hide nav by default */
+   nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    transform: none; /* IMPORTANT: cancels desktop centering */
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+    z-index: 999;
+}
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    /* fix spacing */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* hero readability */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #subtext {
+        margin: 50px;
+
+    }
+
+    /* services stack */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* form spacing */
+    form {
+        margin: 20px;
+    }
+
+    /* contact buttons spacing fix */
+    .contact-buttons {
+        width: 100%;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+    background-color: #111;
+}
+
+/* Policy page container */
+.policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Each policy section becomes a card */
+.policy-section {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+}
+
+.policy-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+.policy-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* List styling */
+.policy-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policy-section li {
+    padding: 8px 0;
+    color: #555;
+    line-height: 1.5;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Remove border from last item */
+.policy-section li:last-child {
+    border-bottom: none;
+}
+
+/* Optional: subtle bullet replacement */
+.policy-section li::before {
+    content: "• ";
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 40px 15px;
+    }
+}

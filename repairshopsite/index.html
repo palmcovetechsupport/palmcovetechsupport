@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Cove Tech Support</title>
+     <link rel="stylesheet" href="index.css">
+     
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links a");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+});
+</script>
+
+<body>
+    <header class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            PALM COVE TECH SUPPORT
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Login Section -->
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+     </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+            <h1>Local Tech Repair & Support Services</h1>
+            <p class="hero-subtext">
+                Hardware repairs, system support, and more — delivered to your door.
+            </p>
+            <p class="hero-subtext" id="subtext">
+                ✔ No fix, no fee<br>
+                ✔ Free quotes<br>
+                ✔ Fast response<br>
+            </p>
+            <a href="#quote" class="cta-btn">Get a Free Quote</a>
+        </div>
+    </section> 
+    
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Screen Repairs</h3>
+                <p>Fast replacement for cracked or damaged screens.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Battery Replacement</h3>
+                <p>Fix battery drain and get your device lasting longer.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Charging Port Repair</h3>
+                <p>Resolve charging issues and loose connections.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Data & System Services</h3>
+                <p>Backups, transfers, cleanup, and software fixes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="door-service">
+        <h2>I Come to You</h2>
+        <p>
+            I offer a fully mobile service and come directly to you for repairs. <br>
+            There is no physical shop location.
+        </p>
+        <p>
+            Book a time and I’ll come to your home or location for fast, convenient service.
+        </p>
+    </section>
+
+    <section class="quote" id="quote">
+
+        <div class="quote-container">
+
+            <h2>Get a Free Quote</h2>
+            <p>Tell us what’s wrong and we’ll get back to you with a price and turnaround time.
+                <br><br>
+            </p>
+            <h6>
+                (Please read our 
+                <a href="policy.html">Service Policy</a>
+                before getting in contact)
+            </h6>
+
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="c7519403-a223-46b6-b80e-9b8400c28f26">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="text" name="email" placeholder="Your contact (so we can reply) eg. phone number or email" required>
+
+                <input type="text" name="device" placeholder="Device (e.g iPhone 12)" required>
+
+                <select name="issue" required>
+                    <option value="">What’s the issue?</option>
+                    <option value="Screen Damage">Screen Damage</option>
+                    <option value="Battery Issue">Battery Issue</option>
+                    <option value="Charging Problem">Charging Problem</option>
+                    <option value="Software Issue">Software Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <textarea name="message" placeholder="Describe the problem..." required></textarea>
+
+                <button type="submit">Send Request</button>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Choose the easiest way to reach us for a quote or support.</p>
+
+    <div class="contact-buttons">
+
+        <!-- Email -->
+        <a href="mailto:palmcovetechsupport@gmail.com" class="contact-btn email">
+        Send Email
+        </a>
+
+       <!-- SMS -->
+        <a href="sms:+61423909723" class="contact-btn sms">
+            Text for a Quote
+        </a>
+
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <p>Palm Cove Tech Support</p>
+        <p>📞 +61 423 909 723 | ✉️ palmcovetechsupport@gmail.com</p>
+        <p>At your door service</p>
+        <p>© 2026 All rights reserved</p>
+    </footer>
+</body>
+</html>

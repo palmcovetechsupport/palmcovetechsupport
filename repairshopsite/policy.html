@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
+
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+
+    // optional: close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+});
+</script>
+
+<body>
+     <header class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            PALM COVE TECH SUPPORT
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login Section -->
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+     </header>
+
+     <main>
+        
+        <section class="about-hero">
+            <h1>Service Policy – Palm Cove Tech Support</h1>
+        </section>
+
+
+        <section class="policy-container">
+
+             <h3>Please read carefully before asking for a service.</h3>
+
+            <div class="policy-section">
+                <h2>💰 Pricing</h2>
+                <ul>
+                    <li>Free quotes provided upfront</li>
+                    <li>Repairs typically $60–$90+ for labour</li>
+                    <li>Parts are charged separately</li>
+                    <li>You will always approve costs before work begins</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>🔧 Parts & Payments</h2>
+                <ul>
+                    <li>Parts must be paid upfront before ordering</li>
+                    <li>All parts are ordered per job (no stock held)</li>
+                    <li>Parts are non-refundable once ordered or installed</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>🛠️ Repairs & Diagnostics</h2>
+                <ul>
+                    <li>Most issues can be quoted without a fee</li>
+                    <li>Complex diagnostics may incur a fee if no repair is completed</li>
+                    <li>No fix, no fee applies to labour only (parts not included)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>⚠️ Repair Risks</h2>
+                <ul>
+                    <li>Some repairs require screen removal</li>
+                    <li>Screens may break during repair</li>
+                    <li>Screen replacement costs are not covered</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>🔒 Warranty & Data</h2>
+                <ul>
+                    <li>Warranty depends on parts and supplier</li>
+                    <li>No warranty on water-damaged devices</li>
+                    <li>Data loss is possible — please back up your device</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>🔐 Privacy & In-Home Service</h2>
+                <ul>
+                    <li>Customer privacy is taken seriously — your personal information will never be shared, sold, or used for any other purpose</li>
+                    <li>Any passwords or account access provided are used only for the requested service and are not stored or recorded</li>
+                    <li>You are encouraged to change passwords after your service for added security</li>
+                    <li>All work is carried out respectfully and professionally when visiting your home</li>
+                    <li>No personal data, photos, or files will ever be accessed unless required for the service</li>
+                </ul>
+            </div>
+
+        </section>
+        <section class="about-services" id="services">
+            <h2>What I Help With</h2>
+            <ul>
+                <li>Screen & battery repairs</li>
+                <li>Charging port issues</li>
+                <li>Virus removal & system cleanup</li>
+                <li>Data transfer & back up</li>
+                <li>Device setup & email configuration</li>
+                <li>General tech troubleshooting</li>
+            </ul>
+        </section>
+
+        <section class="about-cta">
+            <h2>Need support?</h2>
+            
+            <p>Get in touch now.</p>
+            <br>
+
+            <a href="index.html#quote" class="cta-btn">Get a Free Quote</a>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Palm Cove Tech Support</p>
+        <p>📞 +61 423 909 723 | ✉️ palmcovetechsupport@gmail.com</p>
+        <p>At your door service</p>
+        <p>© 2026 All rights reserved</p>
+    </footer>
+
+</body>
+</html>
