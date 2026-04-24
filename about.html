@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
+
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+
+    // optional: close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+});
+</script>
+
+
+<body>
+     <header class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            PALM COVE TECH SUPPORT
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login Section -->
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+     </header>
+
+     <main>
+
+        <section class="about-hero">
+            <h1>About Palm Cove Tech Support</h1>
+        </section>
+
+        <section class="about-content">
+            <h2>Who I Am</h2>
+            <p>
+               I am an independent technician with real repair experience focused on getting your devices working again quickly and affordably.
+
+I come directly to you, meaning there’s no need to travel or visit a shop. This makes the service especially convenient for those who prefer repairs at home or may have difficulty getting around.
+
+I specialise in repairing phones, tablets, and computers, handling everything from broken screens and battery issues to software faults, system cleanups, and device setup.
+
+The goal is simple: provide fast, honest repairs without the hassle or inflated prices you’ll often find elsewhere.
+
+Whether it’s a cracked screen, a slow laptop, or a device that just won’t turn on, I aim to diagnose the issue clearly and give you a straightforward solution.
+
+I also offer help with data transfers, email setup, virus removal, and general tech support—so you can get back to using your devices without stress.
+
+If you’ve got a problem with your tech, feel free to get in touch for a quick quote.
+
+                <br><br>
+
+                Since I don’t carry large amounts of stock, parts are ordered as needed to keep costs low and pass those savings on to you.
+            </p>
+        </section>
+
+        <section class="about-services" id="services">
+            <h2>What I Help With</h2>
+            <ul>
+                <li>Screen & battery repairs</li>
+                <li>Charging port issues</li>
+                <li>Virus removal & system cleanup</li>
+                <li>Data transfer & back up</li>
+                <li>Device setup & email configuration</li>
+                <li>General tech troubleshooting</li>
+            </ul>
+        </section>
+
+        <section class="about-cta">
+            <h2>Need support?</h2>
+            <p>Get in contact now.</p>
+            <br>
+
+            <a href="index.html#quote" class="cta-btn">Get a Free Quote</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Palm Cove Tech Support</p>
+        <p>📞 +61 423 909 723 | ✉️ palmcovetechsupport@gmail.com</p>
+        <p>At your door service</p>
+        <p>© 2026 All rights reserved</p>
+    </footer>
+
+</body>
+</html>
